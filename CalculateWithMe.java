@@ -44,15 +44,13 @@ public class CalculateWithMe extends javax.swing.JFrame {
         btnChiadu = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
         txtFirstnumber = new javax.swing.JTextField();
-        btnCong1 = new javax.swing.JButton();
-        btnCong2 = new javax.swing.JButton();
-        btnCong3 = new javax.swing.JButton();
-        btnCong4 = new javax.swing.JButton();
+        deleteLeft = new javax.swing.JButton();
+        deleteRight = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel1.setText("CALCULATE WITH ME ?");
+        jLabel1.setText("CALCULATE WITH ME â™¡");
 
         jLabel2.setText("First number");
 
@@ -61,7 +59,6 @@ public class CalculateWithMe extends javax.swing.JFrame {
         jLabel4.setText("Result");
 
         btnCong.setBackground(new java.awt.Color(204, 0, 0));
-        btnCong.setForeground(new java.awt.Color(255, 255, 255));
         btnCong.setText("+");
         btnCong.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,7 +67,6 @@ public class CalculateWithMe extends javax.swing.JFrame {
         });
 
         btnTru.setBackground(new java.awt.Color(204, 0, 0));
-        btnTru.setForeground(new java.awt.Color(255, 255, 255));
         btnTru.setText("-");
         btnTru.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,7 +75,6 @@ public class CalculateWithMe extends javax.swing.JFrame {
         });
 
         btnNhan.setBackground(new java.awt.Color(204, 0, 0));
-        btnNhan.setForeground(new java.awt.Color(255, 255, 255));
         btnNhan.setText("*");
         btnNhan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -88,7 +83,6 @@ public class CalculateWithMe extends javax.swing.JFrame {
         });
 
         btnChianguyen.setBackground(new java.awt.Color(204, 0, 0));
-        btnChianguyen.setForeground(new java.awt.Color(255, 255, 255));
         btnChianguyen.setText("/");
         btnChianguyen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,7 +91,6 @@ public class CalculateWithMe extends javax.swing.JFrame {
         });
 
         btnChiadu.setBackground(new java.awt.Color(204, 0, 0));
-        btnChiadu.setForeground(new java.awt.Color(255, 255, 255));
         btnChiadu.setText("%");
         btnChiadu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,46 +99,24 @@ public class CalculateWithMe extends javax.swing.JFrame {
         });
 
         btnReset.setBackground(new java.awt.Color(255, 204, 0));
-        btnReset.setText("CE");
+        btnReset.setText("AC");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnResetActionPerformed(evt);
             }
         });
 
-        btnCong1.setBackground(new java.awt.Color(204, 0, 0));
-        btnCong1.setForeground(new java.awt.Color(255, 255, 255));
-        btnCong1.setText("x²");
-        btnCong1.addActionListener(new java.awt.event.ActionListener() {
+        deleteLeft.setText("->");
+        deleteLeft.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCong1ActionPerformed(evt);
+                deleteLeftActionPerformed(evt);
             }
         });
 
-        btnCong2.setBackground(new java.awt.Color(204, 0, 0));
-        btnCong2.setForeground(new java.awt.Color(255, 255, 255));
-        btnCong2.setText("? x");
-        btnCong2.addActionListener(new java.awt.event.ActionListener() {
+        deleteRight.setText("<-");
+        deleteRight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCong2ActionPerformed(evt);
-            }
-        });
-
-        btnCong3.setBackground(new java.awt.Color(204, 0, 0));
-        btnCong3.setForeground(new java.awt.Color(255, 255, 255));
-        btnCong3.setText("<-");
-        btnCong3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCong3ActionPerformed(evt);
-            }
-        });
-
-        btnCong4.setBackground(new java.awt.Color(204, 0, 0));
-        btnCong4.setForeground(new java.awt.Color(255, 255, 255));
-        btnCong4.setText("->");
-        btnCong4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCong4ActionPerformed(evt);
+                deleteRightActionPerformed(evt);
             }
         });
 
@@ -165,42 +136,35 @@ public class CalculateWithMe extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtFirstnumber, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
+                            .addComponent(txtFirstnumber, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                             .addComponent(txtSecondnumber)
                             .addComponent(txtResult)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addGap(37, 37, 37)
-                                .addComponent(btnCong1, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(115, 115, 115)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(14, 14, 14)
                                 .addComponent(btnCong)
                                 .addGap(26, 26, 26)
-                                .addComponent(btnTru)))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnTru)
+                                .addGap(26, 26, 26)
                                 .addComponent(btnNhan)
                                 .addGap(28, 28, 28)
                                 .addComponent(btnChianguyen)
-                                .addGap(31, 31, 31)
-                                .addComponent(btnChiadu))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnCong2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCong3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(31, 31, 31))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(deleteRight, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnChiadu)
                                 .addGap(41, 41, 41)
                                 .addComponent(btnReset))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(btnCong4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                            .addComponent(deleteLeft, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,13 +195,11 @@ public class CalculateWithMe extends javax.swing.JFrame {
                     .addComponent(btnChianguyen)
                     .addComponent(btnChiadu)
                     .addComponent(btnReset))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCong1)
-                    .addComponent(btnCong2)
-                    .addComponent(btnCong3)
-                    .addComponent(btnCong4))
-                .addContainerGap(36, Short.MAX_VALUE))
+                    .addComponent(deleteLeft)
+                    .addComponent(deleteRight))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         pack();
@@ -260,64 +222,29 @@ public class CalculateWithMe extends javax.swing.JFrame {
 
     private void calculate(String num1, String num2, char opt) throws HeadlessException {
         try {
-           double n1 = Double.parseDouble(num1);
-           double n2 = Double.parseDouble(num2);
-           
+            int n1 = Integer.parseInt(num1);
+            int n2 = Integer.parseInt(num2);
+            
             switch(opt){
                 case '+':
-                    if (n1 == (int) n1 && n2 == (int) n2) {
-                        int sum = (int) (n1 + n2);
-                        txtResult.setText(String.valueOf(sum));
-                    } else {
-                        double sum = n1 + n2;
-                        txtResult.setText(String.valueOf(sum));
-                    }
+                    txtResult.setText(""+ (n1+n2));
                     break;
                 case '-':
-                  //  txtResult.setText(""+ (n1-n2));
-                    if (n1 == (int) n1 && n2 == (int) n2) {
-                        int sub = (int) (n1 - n2);
-                        txtResult.setText(String.valueOf(sub));
-                    } else {
-                        double sub = n1 - n2;
-                        sub = Math.round(sub*1000.0)/1000.0;
-                        txtResult.setText(String.valueOf(sub));
-                    }
+                    txtResult.setText(""+ (n1-n2));
                     break;
                 case '*':
-                   // txtResult.setText(""+ (n1*n2));
-                    if (n1 == (int) n1 && n2 == (int) n2) {
-                        int mul = (int) (n1 * n2);
-                        txtResult.setText(String.valueOf(mul));
-                    } else {
-                        double mul = n1 * n2;
-                        mul = Math.round(mul*1000.0)/1000.0;
-                        txtResult.setText(String.valueOf(mul));
-                    }
+                    txtResult.setText(""+ (n1*n2));
                     break;
                 case '/':
-                    if (n2==0){
-                        txtResult.setText("\n Nhap du lieu sai!");
-                    }
-                    else txtResult.setText(""+ (int)(n1/n2));
+                    txtResult.setText(""+ (n1/n2));
                     break;
                 case '%':
-                    //txtResult.setText(""+ (n1%n2));
-                    if (n2==0){
-                        txtResult.setText("\n Nhap du lieu sai!");
-                    }
-                    else if (n1 == (int) n1 && n2 == (int) n2) {
-                        int mod = (int) (n1 % n2);
-                        txtResult.setText(String.valueOf(mod));
-                    } else {
-                        double mod = n1 % n2;
-                        mod = Math.round(mod*1000.0)/1000.0;
-                        txtResult.setText(String.valueOf(mod));
-                    }
+                    txtResult.setText(""+ (n1%n2));
                     break;
             }
            
         } catch (Exception e){
+            e.printStackTrace();
             JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }
@@ -399,21 +326,34 @@ public class CalculateWithMe extends javax.swing.JFrame {
         txtResult.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void btnCong1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCong1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCong1ActionPerformed
+    private void deleteLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteLeftActionPerformed
+        String f = txtFirstnumber.getText();
+        if(f.equals("")){
+            JOptionPane.showMessageDialog(this, "Empty!");
+        }
+        else{
+            String p = f.substring(1);
+        txtFirstnumber.setText(p);
+        }
+        
+    }//GEN-LAST:event_deleteLeftActionPerformed
 
-    private void btnCong2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCong2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCong2ActionPerformed
-
-    private void btnCong3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCong3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCong3ActionPerformed
-
-    private void btnCong4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCong4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCong4ActionPerformed
+    private void deleteRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteRightActionPerformed
+        String f = txtFirstnumber.getText();
+        if(f.equals("")){
+           JOptionPane.showMessageDialog(this, "Empty!");
+        }
+            
+//        String s = txtSecondnumber.getText();
+        else{
+            String p = f.substring(0, f.length() - 1);
+//        String p2 = s.substring(0, s.length() - 1);
+            txtFirstnumber.setText(p);
+//        txtSecondnumber.setText(p2);
+        }
+        
+        
+    }//GEN-LAST:event_deleteRightActionPerformed
 
     /**
      * @param args the command line arguments
@@ -454,13 +394,11 @@ public class CalculateWithMe extends javax.swing.JFrame {
     private javax.swing.JButton btnChiadu;
     private javax.swing.JButton btnChianguyen;
     private javax.swing.JButton btnCong;
-    private javax.swing.JButton btnCong1;
-    private javax.swing.JButton btnCong2;
-    private javax.swing.JButton btnCong3;
-    private javax.swing.JButton btnCong4;
     private javax.swing.JButton btnNhan;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnTru;
+    private javax.swing.JButton deleteLeft;
+    private javax.swing.JButton deleteRight;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
