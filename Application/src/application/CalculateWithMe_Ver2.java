@@ -470,10 +470,32 @@ public class CalculateWithMe_Ver2 extends javax.swing.JFrame {
 
     private void btnDeleteLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteLeftActionPerformed
         // TODO add your handling code here:
+        String f1 = txtFirstnumber.getText();
+        String f2 = txtSecondnumber.getText();
+        if(f1.equals("")&&f2.equals("")){
+            JOptionPane.showMessageDialog(this, "Empty!");
+        }
+        else{
+            String p1 = f1.substring(1);
+            String p2 = f2.substring(1);
+            txtFirstnumber.setText(p1);
+            txtSecondnumber.setText(p2);
+        }
     }//GEN-LAST:event_btnDeleteLeftActionPerformed
 
     private void btnDeleteRightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteRightActionPerformed
         // TODO add your handling code here
+        String f1 = txtFirstnumber.getText();
+        String f2 = txtSecondnumber.getText();
+        if(f1.equals("")&&f2.equals("")){
+            JOptionPane.showMessageDialog(this, "Empty!");
+        }
+        else{
+            String p1 = f1.substring(1);
+            String p2 = f2.substring(1);
+            txtFirstnumber.setText(p1);
+            txtSecondnumber.setText(p2);
+        }
     }//GEN-LAST:event_btnDeleteRightActionPerformed
 
     private void btnCanAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCanAActionPerformed
