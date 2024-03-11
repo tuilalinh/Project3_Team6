@@ -420,10 +420,52 @@ public class CalculateWithMe_Ver2 extends javax.swing.JFrame {
 
     private void btnSquareAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquareAActionPerformed
         // TODO add your handling code here:
+           StringBuilder sb = new StringBuilder();
+        String num1 = txtFirstnumber.getText();
+        String num2 = txtSecondnumber.getText();
+        try{
+            
+            float n1 = Float.parseFloat(num1);
+            if(txtFirstnumber.getText().isEmpty()==false){
+               if (n1 == (int) n1) {
+                  int square = (int) (n1*n1);
+                    txtFirstnumber.setText(String.valueOf(square));
+                  } else {
+                       float square = n1*n1;
+                       txtFirstnumber.setText(String.valueOf(square));
+                    } 
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Data is missing numbers or calculations");
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter valid numbers");
+        }
     }//GEN-LAST:event_btnSquareAActionPerformed
 
     private void btnSquareBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSquareBActionPerformed
         // TODO add your handling code here:
+        StringBuilder sb = new StringBuilder();
+        String num1 = txtFirstnumber.getText();
+        String num2 = txtSecondnumber.getText();
+           try{
+            
+            float n2 = Float.parseFloat(num2);
+            if(txtSecondnumber.getText().isEmpty()==false){
+               if (n2 == (int) n2) {
+                  int square = (int) (n2*n2);
+                    txtSecondnumber.setText(String.valueOf(square));
+                  } else {
+                       float square = n2*n2;
+                       txtSecondnumber.setText(String.valueOf(square));
+                    } 
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Data is missing numbers or calculations");
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter valid numbers");
+        }
     }//GEN-LAST:event_btnSquareBActionPerformed
 
     private void btnDeleteLeftActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteLeftActionPerformed
