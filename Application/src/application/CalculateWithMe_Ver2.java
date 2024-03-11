@@ -500,12 +500,60 @@ public class CalculateWithMe_Ver2 extends javax.swing.JFrame {
 
     private void btnCanAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCanAActionPerformed
         // TODO add your handling code here:
-        
+        StringBuilder sb = new StringBuilder();
+        String num1 = txtFirstnumber.getText();
+        String num2 = txtSecondnumber.getText();
+        try{
+            
+            float n1 = Float.parseFloat(num1);
+            if (n1<0){
+                JOptionPane.showMessageDialog(null, "Please enter a number greater than 0");
+            }
+            else if(txtFirstnumber.getText().isEmpty()==false){
+               if (n1 == (int) n1) {
+                  int can = (int) Math.sqrt(n1);
+                    txtFirstnumber.setText(String.valueOf(can));
+                  } else {
+                       float can = (float) Math.sqrt(n1);
+                       txtFirstnumber.setText(String.valueOf(can));
+                    } 
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Data is missing numbers or calculations");
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter valid numbers");
+        }
+
     }//GEN-LAST:event_btnCanAActionPerformed
 
     private void btnCanBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCanBActionPerformed
         // TODO add your handling code here:
-      
+       StringBuilder sb = new StringBuilder();
+        String num1 = txtFirstnumber.getText();
+        String num2 = txtSecondnumber.getText();
+        try{
+            
+            float n2 = Float.parseFloat(num2);
+            if (n2<0){
+                JOptionPane.showMessageDialog(null, "Please enter a number greater than 0");
+            }
+            else if(txtSecondnumber.getText().isEmpty()==false){
+               if (n2 == (int) n2) {
+                  int can = (int) Math.sqrt(n2);
+                    txtSecondnumber.setText(String.valueOf(can));
+                  } else {
+                       float can = (float) Math.sqrt(n2);
+                       txtSecondnumber.setText(String.valueOf(can));
+                    } 
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Data is missing numbers or calculations");
+            }
+        } catch (Exception e){
+            JOptionPane.showMessageDialog(null, "Please enter valid numbers");
+        }
+
     }//GEN-LAST:event_btnCanBActionPerformed
 
     /**
